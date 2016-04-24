@@ -1,0 +1,70 @@
+/* Empty. Add your own CSS if you like */
+.vertical_center {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: absolute !important;
+    margin:0 auto;
+    width:100%;
+}
+.ion-input-select--large,
+.ion-input-select,
+select {
+  -webkit-appearance:none;
+  background-repeat: no-repeat;
+  background-color: rgba(0,0,0,0);  
+  border:thin solid #dddddd;
+  font-weight:300;
+  display:inline;
+  vertical-align:middle;
+  color:#333;
+  padding: auto 0;
+  overflow:hidden;
+  box-sizing:border-box;
+
+}
+
+.ion-input-select--large {
+  width:420px;
+  font-size:1.6rem;
+  background-image: url(http://i.imgur.com/7rGM4IX.png);
+  text-indent:40px;
+  padding:1.2rem 0;
+}
+
+.ion-input-select {
+  width:200px;
+  font-size:1rem;
+  background-image: url(http://i.imgur.com/nA9xx1X.png);
+  text-indent:20px;
+  padding:.74rem 0;
+}
+.row-col-center{
+    text-align: center;
+}
+select::-ms-expand {
+    display: none;
+}
+
+:focus {
+  outline:none;
+}
+
+
+/*By Dinesh*/
+.colb {
+    border: solid 1px grey;
+   /* border-bottom-style: none;
+    border-right-style: none;*/
+}
+
+.colb:last-child {
+    border-right: solid 1px grey;
+}
+
+.row:last-child .colb {
+    border-bottom: solid 1px grey;
+}

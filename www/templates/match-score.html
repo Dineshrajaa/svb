@@ -1,0 +1,32 @@
+<ion-view view-title="Q1">
+<ion-content>
+	<div class="row">
+		<div class="col"><label>{{team1}}</label></div>
+		<div class="colb"><input type="number" placeholder="00" /></div>
+		<div class="colb"><input type="number" placeholder="00" /></div>
+		<div class="col"><label>{{team2}}</label></div>
+	</div>
+	<div class="row" ng-repeat="player in playersteam1">
+		<div class="colb padding">#</div>
+		<div class="colb padding">{{player.name}}</div>
+		<div class="col-6"></div>
+		<div class="colb padding" ng-click="matchScorePopup('Add 1PT?')">1PT</div>	
+		<div class="colb padding" ng-click="matchScorePopup('Add 2PT?')">2PT</div>
+		<div class="colb padding" ng-click="matchScorePopup('Add 3PT?')">3PT</div>	
+		<div class="colb padding" ng-click="matchScorePopup('Add ASSIST?')">AST</div>	
+		<div class="colb padding">STL</div>
+		<div class="colb padding">BLk</div>
+		<div class="colb padding">RBD</div>
+		<div class="colb padding" ng-click="matchScorePopup('Add Foul?')">FL</div>
+	</div>
+	<div class="row">
+		<div class="colb padding">Back</div>
+		<div class="colb padding">View All Points</div>
+		<div class="colb padding">Team Fouls</div>
+		<div class="colb padding">4</div>
+		<div class="colb padding" ng-click="matchScorePopup('Timeout?')">Timeouts</div>
+		<div class="colb padding"><input type="text" placeholder="1"></div>
+		<div class="colb padding"><button class="button button-dark">Start Game</button></div>
+	</div>
+</ion-content>
+</ion-view>

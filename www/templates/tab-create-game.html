@@ -1,0 +1,54 @@
+<ion-view view-title="Setup Game">
+    <ion-content class="padding vertical_center">
+        <h3 class="row-col-center">Create Team Roster</h3>
+        <form name="newgame" class="list list-inset">
+            <div class="row">
+                <div class="col">
+                    <div class="row-col-center">
+                        <select id="playerteam1" name="playerteam1" ng-model="game.playerteam1" class="ion-input-select" required multiple>
+                            <option value="" selected="selected">Select Players</option>
+                            <option ng-repeat="option in playersteam1" value="{{option.name}}">{{option.name}}</option>
+                        </select>
+                        <button class="button button-dark" ng-click="showAddPlayerPopup()">Add Player</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row-col-center">
+                        <select id="playerteam1" name="playerteam2" ng-model="game.playerteam2" class="ion-input-select" required multiple>
+                            <option value="" selected="selected">Select Players</option>
+                            <option ng-repeat="option in playersteam2" value="{{option.name}}">{{option.name}}</option>
+                        </select>
+                        <button class="button button-dark">Add Player</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ion-list>
+                        <ion-item ng-repeat="option in playersteam1">{{option.name}}
+                            <ion-option-button class="button-info" ng-click="showEditPlayerPopup(option)">
+                                Edit
+                            </ion-option-button>                            
+                        </ion-item>
+                    </ion-list>
+                </div>
+                <div class="col">
+                    <button class="button button-block button-dark" ng-click="changeToScorePage()">Create Game</button>
+                </div>
+                <div class="col">
+                	<ion-list>
+                        <ion-item ng-repeat="option in playersteam2">{{option.name}}
+                            <ion-option-button class="button-info" ng-click="showEditPlayerPopup(option)">
+                                Edit
+                            </ion-option-button>                            
+                        </ion-item>
+                    </ion-list>
+                </div>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

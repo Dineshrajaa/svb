@@ -1,0 +1,43 @@
+<ion-view view-title="Setup Game">
+  <ion-content class="padding vertical_center">
+	<form name="newgame" class="list list-inset">
+	  <label class="item item-input">
+		<input type="text" ng-click="openDatePicker()" name="gamedate" ng-model="game.date" readonly placeholder="Select Game Date" required>
+	  </label>
+	  <div class="error" ng-show="newgame.gamedate.$touched && newgame.gamedate.$invalid">
+	  	<i class="ion-information-circled"></i>
+        This field is required
+	  </div>
+	  <label class="item item-input">
+		<input type="text" ng-click="openTimePicker1()" name="gametime" ng-model="game.time" readonly placeholder="Select Game Time" required>
+	  </label>
+	  <div class="error" ng-show="newgame.gametime.$touched && newgame.gametime.$invalid">
+	  	<i class="ion-information-circled"></i>
+        This field is required
+	  </div>
+	  <label class="item item-input">
+		<select id="team1" name="gameteam1" class="ion-input-select" ng-model="game.team1" required>
+			<option value="" selected="selected">Select team 1</option>
+			<option ng-repeat="option in teams">{{option.name}}</option>
+		</select>
+	  </label>
+	  <div class="error" ng-show="newgame.gameteam1.$touched && newgame.gameteam1.$invalid">
+	  	<i class="ion-information-circled"></i>
+        This field is required
+	  </div>
+	  <label class="item item-input">
+		<select id="team2" name="gameteam2" class="ion-input-select" ng-model="game.team2" required>
+			<option value="" selected="selected">Select team 2</option>
+			<option ng-repeat="option in teams">{{option.name}}</option>
+		</select>
+	  </label>
+	  <div class="error" ng-show="newgame.gameteam2.$touched && newgame.gameteam2.$invalid">
+	  	<i class="ion-information-circled"></i>
+        This field is required
+	  </div>
+	<div class="padding">
+        <button ng-disabled="newgame.$invalid" class="button button-block button-dark" ng-click="createSchedule()">Next</button>
+    </div>
+	</form>
+  </ion-content>
+</ion-view>
